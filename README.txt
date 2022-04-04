@@ -11,6 +11,9 @@ Same rules as regular sudoku with the addition of sectors.
 The sector will be given with a maximum size and the finished board must have sectors
 that contain that value.
 
+If you would like to try and solve a Killer Sudoku on your own, this website will
+allow you to do so: https://sudoku.com/killer
+
 Usage:
 ./run.exe <input-file> <output-file> <regular/killer>
 
