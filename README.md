@@ -12,7 +12,7 @@ The sector will be given with a maximum size and the finished board must have se
 that contain that value.
 
 Usage:
-./run.exe <input file> <output file> <regular/killer>
+./run.exe <input-file> <output-file> <regular/killer>
 
 Input style:
 The board must be input via text file with the initial layout of the board in a 9x9
