@@ -1,25 +1,24 @@
 #ifndef __RegularBoard
 #define __RegularBoard
 
-#include "board.h"
-#include <vector>
-#include <iostream>
 #include <fstream>
+#include <iostream>
+#include <vector>
 
-extern const int NUM;
-class RegularBoard : public Board{
-    public:
-    //Constructor
-    RegularBoard(std::ifstream &file){loadBoard(file);};
-    //Constructor helper
-    void loadBoard(std::ifstream &file);
+#include "board.h"
 
-    //Returns whether num can be placed at position (col, row)
-    bool canPlace(int col, int row, int num);
+class RegularBoard : public Board {
+ public:
+  // Constructor
+  RegularBoard(std::ifstream &file, char *size);
+  // Constructor helper
+  void loadBoard(std::ifstream &file);
 
-    //Solver
-    bool solve();
+  // Returns whether num can be placed at position (col, row)
+  bool canPlace(int col, int row, int num);
 
+  // Solver
+  bool solve();
 };
 
 #endif

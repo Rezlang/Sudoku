@@ -1,35 +1,35 @@
 #ifndef __KBoard
 #define __KBoard
 
-#include "board.h"
-#include <vector>
-#include <iostream>
 #include <fstream>
-#include <unordered_map>
+#include <iostream>
 #include <map>
 #include <memory>
+#include <unordered_map>
+#include <vector>
 
-extern const int NUM;
-class KillerBoard : public Board{
-    public:
-    //Constructor
-    KillerBoard(std::ifstream &file){loadBoard(file);};
-    //Constructor Helper
-    void loadBoard(std::ifstream &file);
+#include "board.h"
 
-    //Returns whether num can be placed at position (col, row)
-    bool canPlace(int col, int row, int num);
+class KillerBoard : public Board {
+ public:
+  // Constructor
+  KillerBoard(std::ifstream &file, char *size);
+  // Constructor Helper
+  void loadBoard(std::ifstream &file);
 
-    //Solver
-    bool solve();
+  // Returns whether num can be placed at position (col, row)
+  bool canPlace(int col, int row, int num);
 
-    private:
-    //key pair stores y coordinate and x coordinate
-    //value pair stores index of sector in sectorSizes
-    std::map<std::pair<int,int>, int > sectors_;
+  // Solver
+  bool solve();
 
-    //stors pair of current sector size and max sector size
-    std::vector<std::pair<int,int> > sectorSizes_;
+ private:
+  // key pair stores y coordinate and x coordinate
+  // value pair stores index of sector in sectorSizes
+  std::map<std::pair<int, int>, int> sectors_;
+
+  // stors pair of current sector size and max sector size
+  std::vector<std::pair<int, int> > sectorSizes_;
 };
 
 #endif

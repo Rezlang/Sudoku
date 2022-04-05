@@ -15,7 +15,7 @@ If you would like to try and solve a Killer Sudoku on your own, this website wil
 allow you to do so: https://sudoku.com/killer
 
 Usage:
-./run.exe <input-file> <output-file> <regular/killer>
+<executable> <input file> <output file> <regular/killer> <length of board (9)>
 
 Input style:
 The board must be input via text file with the initial layout of the board in a 9x9
